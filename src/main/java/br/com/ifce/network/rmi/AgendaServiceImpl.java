@@ -15,6 +15,11 @@ public class AgendaServiceImpl extends UnicastRemoteObject implements AgendaServ
     }
 
     @Override
+    public String checkConnection() throws RemoteException {
+        return "OK";
+    }
+
+    @Override
     public void add(Contact contact) {
         AgendaRepository.getInstance().add(contact);
     }
